@@ -1,0 +1,92 @@
+.card-dowalker{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 245px;
+    max-height: 245px;
+}
+
+.imagem-perfil{
+    width: 12vw;
+    height: 25vh; 
+}
+
+.modal{
+    border-radius: 1%;
+    color:black;
+    min-height: 80%;
+    width: 60%;
+}
+
+.imagem-perfil-modal{
+    width: 15vw;
+    height: 30vh; 
+    border: 4px solid white;
+}
+
+.box-image-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.detalhes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+div.detalhes>div{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.detalhes>div:nth-child(1){
+    width: 69%;
+    padding-right: 1%;
+}
+div.detalhes>div:nth-child(2){
+    width: 30%;
+}
+
+div.detalhes:nth-child(3){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: start;
+    width: 50%;
+}
+
+div.detalhes:nth-child(4)>div, div.detalhes:nth-child(5)>div{
+    width: 50%;
+}
+
+div.detalhes>div>h6:nth-child(1){
+    font-weight: bold;
+}
+
+.box-dogwalker{
+    position: relative;
+}
+
+.btn-add-passeio {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    z-index: 100;
+    float: right;
+}
+
+.modal-footer{
+    background: rgba(255, 255, 255, 0.349);
+}
+
+#open-modal{
+    color: rgb(30, 30, 30)
+}

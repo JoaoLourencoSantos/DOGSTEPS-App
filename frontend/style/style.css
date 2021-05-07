@@ -1,0 +1,71 @@
+body {
+    background: url("../assets/fundo.png") ;
+    background-position: 85% 11%;
+    display       : flex;
+    min-height    : 100vh;
+    flex-direction: column;
+}
+
+main {
+    background-position: 70% 25%;
+    flex: 1 0 auto;
+}
+
+.nav-wrapper>.brand-logo>.logo {
+    height: 42px;
+    margin-top: 7.5%;
+}
+
+@media (min-width: 800px) {
+    .nav-wrapper>.brand-logo>.logo {
+        margin-left: 30%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 10px;
+    -webkit-border-radius: 16px;
+  }
+  
+  ::-webkit-scrollbar-track-piece {
+    background-color: #ffffff;
+    -webkit-border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:vertical {
+    height: 5px;
+    background-color: #666;
+    -webkit-border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:horizontal {
+    width: 5px;
+    background-color: #666;
+    -webkit-border-radius: 3px;
+  }
+
+  #btn-notification>a>i{
+    color:white;
+  }
+
+  #container-passeio-em-andamento>img{
+    width: 500px;
+    height: 370px;
+  }
+
+  #modal-passeio-em-andamento{
+    overflow: hidden;
+  }
+
+  .pata-left{
+    position: relative;
+    top:0;
+    left: -685px; /*anda 55px para cada pata*/
+  }
+  
+  .pata-right{
+    position: relative;
+    top:60%;
+    left: -720px;
+  }

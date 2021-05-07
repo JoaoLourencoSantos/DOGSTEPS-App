@@ -1,0 +1,139 @@
+body{
+    overflow: hidden;
+}
+.perfil-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: 3%;
+    width: 100%;
+}
+.teste{
+    margin-top: 0px;
+}
+.imagem-perfil-container{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;   
+    width: 45%;
+    height: 60vh;
+}
+.imagem-perfil {
+    margin-left: 10%;
+    width: 40vw;
+    height: 100% !important;
+}
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5%;
+    width: 100%;
+}
+.sobre-mim-content{
+    width: 60%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px;    
+}
+
+.box-solicitar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    margin-top: 3%;
+    margin-right: 5%;
+}
+.solicitar-content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    
+    width: 100%;    
+}
+.passeio{
+    margin-right: 10vw;
+}
+#botao{
+    margin: 0px 0px 15px 115px;
+}
+.solicitacao{
+    margin-right: 20%;
+}
+.solicitacao li {
+    color: teal;
+    font-size: 1.4em;
+}
+.solicitacao ul{
+    align-self: center;
+}
+.solicitar-title{
+    border-bottom: solid;
+    border-color: grey;
+    border-width: 100%;
+    width: 90%;
+}
+.row .col.s12 {
+    width: 25vw;
+   padding: 10px;
+}
+section.col.s12.row{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+
+}
+#duracao-passeio{
+    margin-left: 60px;
+}
+
+@media(max-width: 600px){
+    .perfil-container{
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .conteudo{
+        display: block;        
+        margin-top: 5%;
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .imagem-perfil{
+        margin-top: 30%;
+        margin-left: 0%;
+        width: 28vw;
+        height: 30vh;
+    }
+    .sobre-mim-content{
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 10%;
+    }
+    .box-solicitar{     
+        width: 90%;       
+        margin-left: 5%;
+    }
+    #botao{
+        margin: 10px 0px 0px 35px;
+    }
+    form{
+        display: block;
+        width: 55vw;
+    }
+    section.col.s12.row{
+        display: block;
+        width: 55vw;    
+    }
+    div.input-field.col.s6{
+        width: 100%;
+    }
+}
+
+

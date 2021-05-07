@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/style-solicitar-passeio.css" rel="stylesheet">
+    <link href="assets/icone.png" rel="icon">
+
+    <title>DogSteps</title>
+</head>
+
+<body>
+    <header>
+
+        <nav class="teal accent-4">
+            <div class="nav-wrapper container">
+                <a class="brand-logo" href="index.html">
+                    <img class="logo responsive-img" src="assets/logo.png">
+                </a>
+                <a class="sidenav-trigger" href="#" data-target="mobile-demo">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="cadastro-pets.html">Cadastrar Pet</a></li>
+                    <li><a href="lista-dogWalker.html">Agendar Passeio</a></li>
+                    <li><a href="home-tutor.html">Perfil</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li id="btn-notification">
+                        <a hidden href="#"><i class="material-icons">notifications_active</i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul id="mobile-demo" class="sidenav">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="assets/background.jpg">
+                    </div>
+                </div>
+            </li>
+            <li><a href="#"><i class="material-icons">directions_run</i>Passeios</a></li>
+            <li><a href="#">Cadastrar pet</a></li>
+            <li>
+                <div class="divider" href="#"></div>
+            </li>
+            <li><a class="subheader" href="#">DogSteps</a></li>
+            <li><a class="waves-effect" href="#">Sobre nós</a></li>
+        </ul>
+    </header>
+
+    <main class="row col s12 main-container">
+
+        <div class="card perfil-container">
+            <div class="imagem-perfil-container">
+                <img src="" class="imagem-perfil circle">
+            </div>
+            <div class="conteudo">
+                <div class=" sobre-mim-content">
+                    <h4>Sobre Mim</h4>
+                    <p></p>
+                    <h5>
+                        Disponibilidade:
+                    </h5>
+                    <ul class="disponibilidade-dias">
+                        <li>Dias:</li>
+                        <li></li>
+                    </ul>
+                    <ul class="disponabilidade-horario">
+                        <li>Horarios</li>
+                    </ul>
+                </div>
+
+
+                <div class="box-solicitar s12">
+                    <div class="solicitacao right">
+                        <div class="solicitar-title">
+                            <h5>Contratar Karina</h5>
+                        </div>
+                        <div class="solicitar-content">
+                            <ul class="">
+                                <li class="">30 Minutos ... R$ 20,00</li>
+                                <li>1 Hora ... R$ 30,00</li>
+                            </ul>
+                        </div>
+                        <div class="informacao">
+                            <h5>Agende o seu passeio: </h5>
+                            <form class="col s12 teste" id="formulario">
+                                <section class="col s12 row">
+
+                                    <div class="input-field col s6 l6">
+                                        <div class="icons">
+                                            <i class="material-icons">date_range</i>
+                                        </div>
+                                        <select name="dias-passeio" id="dias-passeio" class="teste" multiple>
+                                            <option value="" disabled>Dias</option>
+                                            <option value="1" id="option-1" style="display:none">Segunda</option>
+                                            <option value="2">Terça</option>
+                                            <option value="3">Quarta</option>
+                                            <option value="4">Quinta</option>
+                                            <option value="5">Sexta</option>
+                                            <option value="6">Sábado</option>
+                                            <option value="7">Domingo</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="input-field col s6 l6">
+                                        <div class="icons">
+                                            <i class="material-icons">access_time</i>
+                                        </div>
+                                        <select name="horarios-passeio" id="horarios-passeio" multiple>
+                                            <option value="" disabled>Horários</option>
+                                            <option value="1">Manhã</option>
+                                            <option value="2">Tarde</option>
+                                            <option value="3">Noite</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="input-field col s6 l6">
+                                        <div class="icons">
+                                            <i class="material-icons">access_time</i>
+                                        </div>
+                                        <select name="horarios-passeio" id="duracao-passeio" multiple>
+                                            <option value="" disabled>Duração</option>
+                                            <option value="1">30 Minutos</option>
+                                            <option value="2">1 Hora</option>
+                                        </select>
+
+                                    </div>
+                                </section>
+                            </form>
+                        </div>
+                        <a class="col s8 waves-effect waves-light btn-large modal-trigger" id="botao"> Solicitar Passeio</a>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/materialize/js/materialize.min.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/solicita-passeio.js"></script>
+</body>
+
+</html>

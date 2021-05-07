@@ -1,0 +1,64 @@
+::-webkit-input-placeholder {
+    color: black;
+}
+ :-moz-placeholder {
+    color: black;
+}
+ ::-moz-placeholder {
+    color: black;
+}
+ :-ms-input-placeholder {
+    color: black;
+}
+
+#sexo {
+    margin-top: 2%;
+}
+
+input.checkbox-blue-grey[type="radio"]+span:not(.lever):after {
+    border: 0px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+input.checkbox-blue-grey[type="radio"]+span:not(.lever):before {
+    border: 0px;
+    background-color: #016151;
+}
+
+main>div#perguntas>div>div#box-pergunta {
+    background: rgba(250, 250, 250, .7);
+}
+
+main>div#perguntas>div>div#box-pergunta>div>div#buttons {
+    background: rgba(0, 0, 0, .7);
+}
+
+main>div#perguntas>div>div#box-pergunta>div>div>label>img:hover{
+    opacity: 1;
+}
+main>div#perguntas>div>div#box-pergunta>div>div>label>img{
+    opacity: .8;
+    
+}
+
+
+#label{  
+    width: 40vh;
+    height: 40vh;
+}
+#imagem-perfil{  
+    width: 35vh;
+    height: 35vh;
+}
+
+#select-endereco{
+    position: absolute; 
+    top:35%; 
+    left:10%;
+}
+
+
+@media (max-height: 520px){
+
+    
+}

@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.brand-logo > .logo{
+    height: 1.5em;
+    margin-top: 7.5px;
+}
+
+.col{
+    margin-top: 3%;
+}
+
+.card-content{
+    height: 100%;
+    color: white;
+    font-size: 1.2em;
+    
+}
+
+#card2 {
+    height: 24vh;
+}
+
+.cards{
+    height: 78vh;
+}
+
+.btn-large{
+    min-width: 70%;
+    font-weight: 700;
+    
+}
+@media(max-width: 1025px){
+    .btn-large{
+        width: 73%;
+    }
+    #card2{
+        height: 19vh;
+    }
+}
+
+.card-image  img[src="assets/dogwalker.png"]{
+    
+    padding: 10%;
+    
+}
+
+
+.card-image  img[src="assets/dono.png"]{
+   
+    padding: 10%;
+   
+}
+
+@media(min-height: 800px){
+    .cards {
+        height: 68vh;
+    }
+}

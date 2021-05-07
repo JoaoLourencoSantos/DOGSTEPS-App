@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.brand-logo >img {
+	width: 50px;
+	height: 50px;
+	margin-top: 5px;
+}
+.bg-card-user {
+	background: rgba(220, 238, 235, 0.5);
+  padding: 3% 1% 10%;
+}
+.truncate >img {
+	width: 100px;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+.col .row {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logueo {
+    height: 100vh!important;
+}
+i.iconis {
+    font-size: 1em!important;
+    margin-top: 8px;
+}
+.login {
+    border: 1px solid #FFF;
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,.7);
+    padding: 10px;
+}

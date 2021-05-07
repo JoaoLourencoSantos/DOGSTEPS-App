@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style-home-tutors.css">
+    <title>Perfil: </title>
+</head>
+
+<body>
+    <header>
+        <nav class="teal accent-4">
+            <div class="nav-wrapper container">
+                <a class="brand-logo" href="index.html">
+                    <img class="logo responsive-img" src="assets/logo.png" alt="Logo do site"
+                        title="Logo do site Dog Steps">
+                </a>
+                <a class="sidenav-trigger" href="#" data-target="mobile-demo">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a id="sair-dogwalker" href="login.html">Sair</a></li>
+                    <li>
+                        <img id="foto-perfil-menor" class="circle" src="assets/perfil.png"
+                            title="clique para trocar a foto do perfil" />
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul id="mobile-demo" class="sidenav">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="assets/background.jpg">
+                    </div>
+                    <a href="#user"><img class="circle" src="assets/perfil.png"></a>
+                    <a href="#name"><span class="white-text name">João Marcos </span></a>
+                    <a href="#email"><span class="white-text email">joaomarcos@gmail.com</span></a>
+                </div>
+            </li>
+            <li><a href="#"><i class="material-icons">directions_run</i>Passeios</a></li>
+            <li><a href="#">Cadastrar pet</a></li>
+            <li>
+                <div class="divider" href="#"></div>
+            </li>
+            <li><a class="subheader" href="#">DogSteps</a></li>
+            <li><a class="waves-effect" href="#">Sobre nós</a></li>
+        </ul>
+    </header>
+
+    <main>
+
+        <div class="content">
+            <div id="base-conteudo-home" class="row">
+                <div id="conteudo-home" class=" col s8 m10 l10">
+                    <ul id="tabs-swipe-demo" class="tabs">
+                        <li class="tab col +s1 m4"><a class="active" href="#test-swipe-1">
+                                Passeios
+                                <img src="assets/dog.png" alt=""></a></li>
+                        <li class="tab col +s1 m4"><a href="#test-swipe-2">
+                                Meus pets
+                                <img src="assets/animal-prints.png" alt=""></a></li>
+                        <li class="tab col +s4 m4"><a href="#test-swipe-3">
+                                Configurações
+                                <i class="material-icons">settings</i></a></li>
+                    </ul>
+
+                    <div id="test-swipe-1" class="col s3">
+                        <section>
+                            <div class="row" id="passeios">
+
+                                <div id="carregando">
+                                    <h5>Carregando</h5>
+                                    <img src="assets/loading.gif" class="responsive-img" alt="">
+                                </div>
+
+                                <div class="col s12 disabled" id="sem-passeios">
+                                    <p>Você ainda não possui nenhum passeio pendente</p>
+                                    <img src="assets/dogwalker.png" class="responsive-img vetor-sem-passeio" alt="">
+                                </div>
+
+                                <div id="listagem">
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="test-swipe-2" class="col s3">
+                        <section>
+
+                            <div class="row" id="historico">
+
+                                <div class="col s12 disabled" id="sem-pets">
+                                    <p class="flow-text">Você não realizou nenhum passeio</p>
+                                    <img src="assets/dono.png" class="responsive-img" alt="" style='width:50%;'>
+                                </div>
+
+                                <div class="listagem-passeios">
+
+                                </div>
+
+                            </div>
+
+                        </section>
+                    </div>
+
+                    <div id="test-swipe-3" class="col s12">
+                        <section id="info-pessoal" class=" col s6">
+                            <div class="imagem-perfil-home">
+                                <label for="file-input">
+                                    <img id="foto-perfil" class="circle" src="assets/perfil.png"
+                                        title="clique para trocar a foto do perfil" />
+                                </label>
+                            </div>
+                            <div class="nome col s12" id="username">
+                                usuario padrao
+                            </div>
+                            <div class="informacoes col s12">
+                                <span>
+                                    Passeios realizados :<span id="count">0</span>
+                                </span>
+                            </div>
+                        </section>
+
+                        <div class="row col s6">
+                            <form class="col s12" id="form-configuracoes" action="google.com">
+                                Alterar nome
+                                <div class="row ">
+                                    <div class="input-field col s12">
+                                        <input id="nome" type="text" class="validate">
+                                    </div>
+                                </div>
+                                Alterar senha:
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="password" type="password" class="validate">
+                                    </div>
+                                </div>
+                                Alterar E-mail
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="email" type="email" class="validate">
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn waves-effect waves-light" id="submit-config" type="button">salvar
+                                        <i class="material-icons right">send</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4><i class="material-icons">priority_high</i>Deseja cancelar o passeio?</h4>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn">Não</a>
+                <a class="modal-close waves-effect waves-grenn red darken-3 btn" id="corfirmar">Confirmo</a>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/materialize/js/materialize.min.js"></script>
+    <script src="script/request.js"></script>
+    <script src="script/script-perfil-dogwalker.js"></script>
+</body>
+
+</html>

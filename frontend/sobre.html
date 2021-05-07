@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sobre Dogsteps</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style/sobre.css">
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="teal accent 4 s12 ">
+            <div class="nav-wrapper container">
+                <a class="brand-logo" href="index.html">
+                    <img class="logo responsive-img" src="assets/logo.png" alt="Logo do site"
+                        title="Logo do site Dog Steps">
+                </a>
+                <a class="sidenav-trigger" href="#" data-target="mobile-demo">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div id="voltar" style="z-index: 999">
+            <a href="index.html">Voltar para tela inicial</a>
+        </div>
+
+        <div id="slider-fullscreen">
+
+            <div class="slider fullscreen">
+                <ul class="slides">
+
+                    <li>
+                        <div class="caption center-align">
+                            <img class="responsive-img" id="logo" src="assets/icone.png" alt="">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="caption center-align centralizado">
+                            <h1>Estatísticas</h1>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="caption left-align centralizado">
+                            <div class="wrapper">
+
+                                <div class="dogwalker-img">
+                                    <img class="dogwalker" src="assets/dogwalker.png" alt="">
+                                </div>
+
+                                <div>
+                                    <h3>Número total de dogwalkers cadastrados
+                                    </h3>
+                                    <h2><span id="total-cadastrados">3020</span></h2>
+                                    <h5 class="light grey-text text-lighten-3">
+                                        Assim podemos conhecer nosso público alvo
+                                    </h5>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="caption left-align centralizado">
+                            <h3>Idade média dos passeadores
+                            </h3>
+                            <h2><span id="media-idade-passeador">26</span>
+                            </h2>
+                            <h5 class="light grey-text text-lighten-3">Assim podemos conhecer
+                                nosso público alvo
+                            </h5>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="caption left-align centralizado">
+                            <h3>Quantidade de média de pets por tutor
+                            </h3>
+                            <h2><span id="pets-por-tutor">2,6</span></h2>
+                            <h5 class="light grey-text text-lighten-3">Assim podemos conhecer
+                                nosso mais nossos tutores
+                            </h5>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="caption left-align" id="content-dados">
+
+                            <h2 class="light grey-text text-lighten-3">
+                                Passeios:
+                            </h2>
+                            <h5 class="light grey-text text-lighten-3">Quantidade total: <span
+                                    id="total-passeio">81</span></h5>
+                            <h5 class="light grey-text text-lighten-3">Finalizados: <span
+                                    id="passeio-finalizado">62</span></h5>
+                            <h5 class="light grey-text text-lighten-3">Em andamento: <span
+                                    id="passeio-em-andamento">15</span></h5>
+                            <h5 class="light grey-text text-lighten-3">Aguardando avaliação: <span
+                                    id="passeio-aguardando-avaliacao">6</span></h5>
+                            <h5 class="light grey-text text-lighten-3">Duração:
+                                | Uma hora: <span id="horarios-uma-hora">40</span> |
+                                | Meia hora: <span id="horario-meia-hora">22</span> |
+                            </h5>
+                        </div>
+                        <div class="right" style="
+                        margin-top: 45px;
+                        position: relative;
+                        right: 20px; 
+                        width: 750px;
+                        height: 500px;" id="graficos-container">
+                            <div style="
+                                    
+                                width: 100%;
+                                height: 100%;" id="graf-container-passeio">
+                                <div>
+                                    <canvas style=" 
+                                            
+                                        width: 440px;
+                                        height: 300px;" id="grafico-passeio"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="caption center-align">
+                            <h2>Nossa equipe</h2>
+                            <h4 class="light white-text text-lighten-3">Andrew Costa | João Guilherme
+                                | João Marcos | William Menegaldi
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </main>
+
+
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+<script> $(document).ready(function () { $('.slider').slider({ full_width: true }); }); </script>
+<script src="script/sobre.js"></script>
+
+
+</html>

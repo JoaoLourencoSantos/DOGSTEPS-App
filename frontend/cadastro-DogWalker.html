@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/style-cadastro-DogWalker.css" rel="stylesheet">
+    <link href="assets/icone.png" rel="icon">
+    <link rel="stylesheet" href="style/style-map.css">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel='stylesheet'
+        href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css'
+        type='text/css' />
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css'
+        type='text/css' />
+    <title>DogSteps</title>
+</head>
+
+<body>
+    <header>
+
+        <nav class="teal accent-4">
+            <div class="nav-wrapper container">
+                <a class="brand-logo" href="index.html">
+                    <img class="logo responsive-img" src="assets/logo.png" alt="Logo do site"
+                        title="Logo do site Dog Steps">
+                </a>
+                <a class="sidenav-trigger" href="#" data-target="mobile-demo">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul id="mobile-demo" class="sidenav">
+            <li>
+
+            </li>
+            <li><a href="#"><i class="material-icons">directions_run</i>Passeios</a></li>
+            <li><a href="#">Cadastrar pet</a></li>
+            <li>
+                <div class="divider" href="#"></div>
+            </li>
+            <li><a class="subheader" href="#">DogSteps</a></li>
+            <li><a class="waves-effect" href="#">Sobre nós</a></li>
+        </ul>
+    </header>
+
+
+    <main class=" valign-wrapper ">
+        <div id="perguntas" class="container flex row">
+            <div class="col s1">
+                <ul class="pagination " id="pags">
+                    <li class="active waves-effect #00796b teal darken-2"><a style="cursor:default" href="#!">1</a></li>
+                    <li class=""><a style="cursor:default" href="#!">2</a></li>
+                    <li class=""><a style="cursor:default" href="#!">3</a></li>
+                    <li class=""><a style="cursor:default" href="#!">4</a></li>
+                </ul>
+            </div>
+            <div class="container col s10 flex row">
+                <div id="box-pergunta" class="card-panel card large black-text">
+                    <div class="card-content ">
+                        <div class="valign-wrapper flex-row s12 flex">
+
+                            <input id="add-imagem" type="file" style="display: none" accept="image/*">
+
+                            <label class="col s4 m5 small" for="add-imagem" id="label">
+                                <img id="imagem-perfil" class="responsive-img" src="assets/dono.png"
+                                    alt="Foto do seu perfil" title="Adicionar imagem do DogWalker">
+                            </label>
+
+                            <input id="add-imagem-frente" type="file" style="display: none" accept="image/*">
+                            <div class="imagem-identidade-label">
+                                <span id="title-identidade">Coloque uma foto frente e verso da sua identidade:</span>
+                                <label class="col s12 m6 l6 large imagem-identidade-label" for="add-imagem-frente">
+                                    <img id="imagem-frente" class="responsive-img " src="assets/dono.png"
+                                        alt="Foto da identidade" title="Foto da frente da identidade">
+                                </label>
+
+                                <input id="add-imagem-tras" type="file" style="display: none" accept="image/*">
+
+                                <label class="col s12 m6 l6 large imagem-identidade-label" for="add-imagem-tras">
+                                    <img id="imagem-tras" class="responsive-img imagem-dogWalker" src="assets/dono.png"
+                                        alt="Foto da identidade" title="Foto de trás da identidade">
+                                </label>
+                            </div>
+
+
+                            <div class="col s8 content-container">
+                                <span class="card-title">Suas preferências:</span>
+                                <p id="texto">Nos conte um pouco mais sobre você, sua história de convivência com
+                                    animais de estimação, os pets que tem hoje, os cursos que já fez na área (se já fez
+                                    algum), ou livros que já leu sobre animais, porque quer se tornar um DogWalker...
+                                </p>
+                                <br>
+
+
+                                <form id="resp">
+
+                                    <input class="resposta" class="validate" type="text" placeholder="Nome:"
+                                        style="color:black" required>
+                                    <input class="resposta datepicker autoClose format" type="text"
+                                        placeholder="Data de Nascimento:" required>
+
+                                    <input id="cpf" class="resposta" type="text" placeholder="CPF: " required>
+                                    <input id="celular" class="resposta" type="text" placeholder="Celular: " required>
+                                    <input class="resposta" type="email" placeholder="Email: " required>
+                                    <input class="resposta" type="password" placeholder="Senha: " required>
+
+
+                                    <input id="descricao" class="resposta" type="text" placeholder="" required>
+
+                                    <div class="input-field col s12">
+                                        <select id="preferencia" name="preferencia" multiple required>
+                                            <option value="" disabled>Escolha o tamanho do pet</option>
+                                            <option value="1">Mini(0,5 kg a 6kg) até 33 cm</option>
+                                            <option value="2">Pequeno (6 kg a 15 kg) até 43 cm</option>
+                                            <option value="3">Médio (15 kg a 25 kg) até 60 cm</option>
+                                            <option value="4">Grande (25kg a 45 kg) até 70 cm</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <select id="temperamento" name="temperamento" multiple required>
+                                            <option value="" disabled>Temperamento do pet</option>
+                                            <option value="1">Calmo</option>
+                                            <option value="2">Brincalhão</option>
+                                            <option value="3">Preguiçoso</option>
+                                            <option value="4">Agressivo</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <select name="dias-passeio" id="dias-passeio" multiple>
+                                            <option value="" disabled>Dias</option>
+                                            <option value="1">Domingo</option>
+                                            <option value="2">Segunda</option>
+                                            <option value="3">Terça</option>
+                                            <option value="4">Quarta</option>
+                                            <option value="5">Quinta</option>
+                                            <option value="6">Sexta</option>
+                                            <option value="7">Sábado</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <select name="horarios-passeio" id="horarios-passeio" multiple>
+                                            <option value="" disabled>Horários</option>
+                                            <option value="1">Manhã</option>
+                                            <option value="2">Tarde</option>
+                                            <option value="3">Noite</option>
+                                        </select>
+                                    </div>
+
+                                </form>
+                                <div id="select-endereco" class="input-field col s12 row">
+                                    <div class="icons  col s2">
+                                        <i class="medium material-icons">location_on</i>
+                                    </div>
+                                    <a id="btn-modal-endereco" class="col s8 modal-trigger" href="#modal-endereco">
+                                        <input type="search" name="" id="search" placeholder="Endereço"> </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="buttons" class="card-action right">
+
+                            <a id="preview" class="waves-effect waves-light btn left" title="Clique para retroceder"
+                                href="#" style="display: none">
+                                <i class="material-icons left">chevron_left</i> Preview
+                            </a>
+                            <a id="next" class="waves-effect waves-light btn right" title="Clique para ir ao proximo"
+                                href="#">
+                                <i class="material-icons right">chevron_right</i> Next
+                            </a>
+                            <a id="send" class="waves-effect waves-light btn right" href="#" title="Clique para enviar"
+                                style="display: none">
+                                <i class="material-icons right">send</i> Send
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+    </main>
+    <div id="modal-endereco" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <div id="map"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" id="btn-getCoord" class="modal-close btn waves-effect waves-light"
+                title="Clique para selecionar o endereço">
+                Selecionar endereço</a>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+        src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
+    <script src="script/map.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/request.js"></script>
+    <script src="script/script-cadastro-dogWalker.js"></script>
+    <script type="text/javascript" src="libs/jquery/jquery.mask.min.js"></script>
+
+</body>
+
+</html>

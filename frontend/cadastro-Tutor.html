@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/style-cadastro-DogWalker.css" rel="stylesheet">
+
+    <link href="assets/icone.png" rel="icon">
+
+    <link rel="stylesheet" href="style/style-map.css">
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+
+    <script
+        src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet'
+        href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css'
+        type='text/css' />
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css'
+        type='text/css' />
+    <title>DogSteps</title>
+</head>
+
+<body>
+    <header>
+        <nav class="teal accent 4 s12 ">
+            <div class="nav-wrapper container">
+                <a class="brand-logo" href="index.html">
+                    <img class="logo responsive-img" src="assets/logo.png" alt="Logo do site"
+                        title="Logo do site Dog Steps">
+                </a>
+                <a class="sidenav-trigger" href="#" data-target="mobile-demo">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class=" valign-wrapper ">
+        <div id="perguntas" class="container flex row">
+            <div class="col s1">
+                <ul class="pagination " id="pags">
+                    <li class="active waves-effect #00796b teal darken-2"><a style="cursor:default" href="#!">1</a></li>
+                    <li class=""><a style="cursor:default" href="#!">2</a></li>
+                </ul>
+            </div>
+            <div class="container col s10 flex row">
+                <div id="box-pergunta" class="card-panel card large black-text">
+                    <div class="card-content ">
+                        <div class="valign-wrapper flex-row s12 flex">
+
+                            <input id="add-imagem" type="file" style="display: none" accept="image/*">
+
+                            <label class="col s4 m5 small" for="add-imagem" id="label">
+                                <img id="imagem-perfil" class="responsive-img" src="assets/dono.png"
+                                    alt="Foto do seu perfil" title="Adicionar imagem do DogWalker">
+                            </label>
+
+                            <input id="add-imagem-frente" type="file" style="display: none" accept="image/*">
+
+
+                            <div class="col s8 content-container">
+                                <span class="card-title"></span>
+                                <p id="texto">
+                                </p>
+                                <br>
+                                <form id="resp">
+
+                                    <input class="resposta" class="validate" type="text" placeholder="Nome:"
+                                        style="color:black" required>
+                                    <input class="resposta datepicker autoClose format" type="text"
+                                        placeholder="Data de Nascimento:" required>
+
+                                    <input id="cpf" class="resposta" type="text" placeholder="CPF: " required>
+                                    <input class="resposta" type="email" placeholder="Email: " required>
+                                    <input class="resposta" type="password" placeholder="Senha: " required>
+
+
+
+
+                                </form>
+                                <div id="select-endereco" class="input-field col s12 row">
+                                    <div class="icons  col s2">
+                                        <i class="medium material-icons">location_on</i>
+                                    </div>
+                                    <a id="btn-modal-endereco" class="col s8 modal-trigger" href="#modal-endereco">
+                                        <input type="search" name="" id="search" placeholder="Endereço"> </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="buttons" class="card-action right">
+
+                            <a id="preview" class="waves-effect waves-light btn left" title="Clique para retroceder"
+                                href="#" style="display: none">
+                                <i class="material-icons left">chevron_left</i> Preview
+                            </a>
+                            <a id="next" class="waves-effect waves-light btn right" title="Clique para ir ao proximo"
+                                href="#">
+                                <i class="material-icons right">chevron_right</i> Next
+                            </a>
+                            <a id="send" class="waves-effect waves-light btn right" href="#" title="Clique para enviar"
+                                style="display: none">
+                                <i class="material-icons right">send</i> Send
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+    </main>
+    <div id="modal-endereco" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <div id="map"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" id="btn-getCoord" class="modal-close btn waves-effect waves-light"
+                title="Clique para selecionar o endereço">
+                Selecionar endereço</a>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/jquery/jquery.mask.min.js"></script>
+    <script src="script/map.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script/request.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/script-cadastro-tutor.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="style/style.css" rel="stylesheet">
+	<link href="style/style-search.css" rel="stylesheet">
+	<link href="style/style-lista-dogwalker.css" rel="stylesheet">
+	<link href="assets/icone.png" rel="icon">
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+
+	<link rel="stylesheet" href="style/style-map.css">
+
+	<script
+		src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+	<link rel='stylesheet'
+		href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css'
+		type='text/css' />
+
+	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
+	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css'
+		type='text/css' />
+	<title>DogSteps</title>
+</head>
+
+<body>
+	<header>
+		<nav class="teal accent-4">
+			<div class="nav-wrapper container">
+				<a class="brand-logo" href="index.html">
+					<img class="logo responsive-img" src="assets/logo.png">
+				</a>
+				<a class="sidenav-trigger" href="#" data-target="mobile-demo">
+					<i class="material-icons">menu</i>
+				</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="cadastro-pets.html">Cadastrar Pet</a></li>
+					<li><a href="lista-dogWalker.html">Agendar Passeio</a></li>
+					<li><a href="home-tutor.html">Perfil</a></li>
+					<li><a href="sobre.html">Sobre nós</a></li>
+					<li><a id="sair-tutor" href="login.html">Sair</a></li>
+					<li id="btn-notification">
+						<a hidden href="#"><i class="material-icons">notifications_active</i></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<ul id="mobile-demo" class="sidenav">
+			<li>
+				<div class="user-view">
+					<div class="background">
+						<img src="assets/background.jpg">
+					</div>
+				</div>
+			</li>
+			<li><a href="#"><i class="material-icons">directions_run</i>Passeios</a></li>
+			<li><a href="#">Cadastrar pet</a></li>
+			<li>
+				<div class="divider" href="#"></div>
+			</li>
+			<li><a class="subheader" href="#">DogSteps</a></li>
+			<li><a class="waves-effect" href="#">Sobre nós</a></li>
+		</ul>
+	</header>
+
+
+	<main class="container">
+		<div class="search-container">
+			<div class="top-container">
+				<h5>Encontre passeadores disponíveis</h5>
+			</div>
+			<form action="javascript:void(0)" class="col s12">
+				<section class="col s12 row">
+					<div class="input-field col s4">
+						<div class="icons">
+							<i class="material-icons">location_on</i>
+						</div>
+						<a id="btn-modal-endereco" class="modal-trigger" href="#modal-endereco">
+							<input type="search" name="" id="search" placeholder="Endereço"> </a>
+					</div>
+					<div class="input-field col s4">
+						<div class="icons">
+							<i class="material-icons">date_range</i>
+						</div>
+						<select name="dias-passeio" id="dias-passeio" multiple>
+							<option value="" disabled>Dias</option>
+							<option value="1">Domingo</option>
+							<option value="2">Segunda</option>
+							<option value="3">Terça</option>
+							<option value="4">Quarta</option>
+							<option value="5">Quinta</option>
+							<option value="6">Sexta</option>
+							<option value="7">Sábado</option>
+						</select>
+					</div>
+					<div class="input-field col s4">
+						<div class="icons">
+							<i class="material-icons">access_time</i>
+						</div>
+						<select name="horarios-passeio" id="horarios-passeio" multiple>
+							<option value="" disabled>Horários</option>
+							<option value="1">Manhã</option>
+							<option value="2">Tarde</option>
+							<option value="3">Noite</option>
+						</select>
+					</div>
+				</section>
+
+				<div class="bottom-search_box">
+					<div class="input-field col s12">
+						<div class="icons">
+							<img src="assets/dog.png" alt="">
+						</div>
+						<select name="preferencia" id="preferencia">
+							<option value="0" disabled selected>Escolha o tamanho do Pet</option>
+							<option value="1">Mini (0,5 kg a 6kg) até 33 cm</option>
+							<option value="2">Pequeno (6 kg a 15 kg) até 43 cm</option>
+							<option value="3">Médio (15 kg a 25 kg) até 60 cm</option>
+							<option value="4">Grande (25kg a 45 kg) até 70 cm</option>
+						</select>
+					</div>
+
+					<div class="search-button">
+						<button id="btnBusca" class="btn waves-effect waves-light" type="submit" name="action">pesquisar
+							<i class="material-icons right">search</i>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<section id="listagem-dogwalker" class="col s12">
+
+		</section>
+
+	</main>
+
+	<div id="open-modal" class="modal modal-fixed-footer">
+		<div style="overflow:hidden" class="container-detail modal-content">
+
+		</div>
+		<div class="modal-footer">
+			<a href="solicitar-passeio.html" class="modal-close btn waves-effect waves-light"
+				title="Clique para selecionar o DogWalker">
+				Selecionar DogWalker</a>
+		</div>
+	</div>
+
+	<div id="modal-endereco" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<div id="map"></div>
+		</div>
+		<div class="modal-footer row">
+			<div class="center col s8">
+				<span class="col s8">
+					Clique neste botão para traçar onde deseja que seu passeio aconteça, e clique duas vezes para
+					selecionar esta área.
+				</span>
+			</div>
+			<a href="#!" id="btn-getCoord" class="modal-close col s4 btn waves-effect waves-light"
+				title="Clique para selecionar o endereço">
+				Selecionar endereço</a>
+		</div>
+	</div>
+
+	<div id="modal-passeio-finalizado" class="modal modal-fixed-footer">
+		<div class="modal-content card-image col s12">
+			<section class="card-image center">
+				<h3 class="card-title">Avalie o nosso passeador!!!</h3>
+			</section>
+
+			<section id="container-passeio-finalizado" class="card-image center">
+
+			</section>
+			</br></br>
+			<section class="container">
+				<i id="5" class="large material-icons right">star_border</i>
+				<i id="4" class="large material-icons right">star_border</i>
+				<i id="3" class="large material-icons right">star_border</i>
+				<i id="2" class="large material-icons right">star_border</i>
+				<i id="1" class="large material-icons right">star_border</i>
+			</section>
+		</div>
+		<div class="modal-footer row">
+			<a href="#" id="btn-send-avaliation" class="right col s4 btn waves-effect waves-light"
+				title="Clique para Enviar Avaliação">
+				Enviar</a>
+		</div>
+	</div>
+
+
+	<div id="modal-passeio-em-andamento" class="modal ">
+		<div class="modal-content card-image col s12">
+			<section class="card-image center">
+				<h3 class="card-title">Observe o andamento do seu passeio</h3>
+			</section>
+			<div id="container-passeio-em-andamento" class="card-image center">
+				<img class="small responsive-img" src="assets/passeio-em-andamento.png" alt="">
+				<div id="progress-bar" class="progress ">
+					<div id="bar-progress-bar" class="determinate" style="width: 70%"></div>
+				</div>
+			</div>
+			<div id="footer-patas" class="modal-footer">
+				<img class="pata-left" src="assets/pata-dog.png" alt="">
+				<img class="pata-right" src="assets/pata-dog.png" alt="">
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	<script src="script/map.js"></script>
+	/<script src="script/script-busca.js"></script>
+	<script src="script/request.js"></script>
+	<script src="script/script.js"></script>
+	
+
+
+</body>	
+</html>

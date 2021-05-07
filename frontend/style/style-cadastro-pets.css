@@ -1,0 +1,48 @@
+::-webkit-input-placeholder {
+    color: black;
+}
+ :-moz-placeholder {
+    color: black;
+}
+ ::-moz-placeholder {
+    color: black;
+}
+ :-ms-input-placeholder {
+    color: black;
+}
+
+@media (max-width: 700px) {
+    main.valign-wrapper>div#perguntas {
+        display: flex;
+        flex-direction: column;
+    }
+    main.valign-wrapper>div#perguntas>div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    main.valign-wrapper>div#perguntas>div>ul#pags {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+#sexo {
+    margin-top: 2%;
+}
+
+main>div#perguntas>div>div#box-pergunta {
+    background: rgba(250, 250, 250, .7);
+}
+
+main>div#perguntas>div>div#box-pergunta>div>div#buttons {
+    background: rgba(0, 0, 0, .7);
+}
+
+main>div#perguntas>div>div#box-pergunta>div>div>label>img:hover{
+    opacity: 1;
+}
+main>div#perguntas>div>div#box-pergunta>div>div>label>img{
+    height: 230px;
+    opacity: .8;
+}
